@@ -1,15 +1,15 @@
 const hre = require("hardhat");
 
 async function main() {
-  const NAME = "AI Generated NFT"
-  const SYMBOL = "AINFT"
-  const COST = ethers.utils.parseUnits("1", "ether") // 1 ETH
+  const NAME = "GeniusMintAI";
+  const SYMBOL = "GMAI";
+  const COST = ethers.utils.parseUnits("1", "ether"); // 1 ETH
 
-  const NFT = await hre.ethers.getContractFactory("NFT")
-  const nft = await NFT.deploy(NAME, SYMBOL, COST)
-  await nft.deployed()
+  const NFT = await hre.ethers.getContractFactory("NFT");
+  const nft = await NFT.deploy(NAME, SYMBOL, COST);
+  await nft.deployed();
 
-  console.log(`Deployed NFT Contract at: ${nft.address}`)
+  console.log(`Deployed NFT Contract at: ${nft.address}`);
 }
 
 // We recommend this pattern to be able to use async/await everywhere
