@@ -39,9 +39,19 @@ function App() {
 
       <div className="form">
         <form onSubmit={submitHandler}>
-          <input type="text" placeholder="Create a name..."></input>
-          <input type="text" placeholder="Create a desciption..."></input>
-          <input type="submit" value="Create & Mint"></input>
+          <input
+            type="text"
+            placeholder="Create a name..."
+            onChange={(e) => {
+              setName(e.target.value);
+            }}
+          />
+          <input
+            type="text"
+            placeholder="Create a description..."
+            onChange={(e) => setDescription(e.target.value)}
+          />
+          <input type="submit" value="Create & Mint" />
         </form>
 
         <div className="image">
