@@ -42,6 +42,10 @@ function App() {
           <img src="" alt="AI generated Image"></img>
         </div>
       </div>
+
+      <p>
+        View&nbsp;<a href="" target="_blank" rel="noreferrer">Metadata</a>
+      </p>
     </div>
   );
 }
