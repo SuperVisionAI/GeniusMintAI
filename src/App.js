@@ -25,6 +25,8 @@ function App() {
   const [image, setImage] = useState(null);
   const [url, setURL] = useState(null);
 
+  const [isWaiting, setWaiting] = useState(false)
+
   const loadBlockchainData = async () => {
     const provider = new ethers.providers.Web3Provider(window.ethereum);
     setProvider(provider);
@@ -47,11 +49,15 @@ function App() {
       return;
     }
 
+    setIsWaiting(true)
+
     const imageData = createImage();
 
     const url = await uploadImage(imageData);
 
     await mintImage(url);
+
+    setIsWaiting(false)
   };
 
   const createImage = async () => {
