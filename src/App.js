@@ -26,7 +26,7 @@ function App() {
 
   const [message, setMessage] = useState("");
   const [isWaiting, setIsWaiting] = useState(false);
-  
+
   const [isBlockchainLoaded, setIsBlockchainLoaded] = useState(false);
 
   const loadBlockchainData = async () => {
@@ -127,7 +127,9 @@ function App() {
     setMessage("Waiting for Mint...");
 
     const signer = await provider.getSigner();
-    const transaction = await nft.connect(signer).mint(tokenURI, { value: ethers.utils.parseUnits("1", "ether") });
+    const transaction = await nft.connect(signer).mint(tokenURI, {
+      value: ethers.utils.parseUnits("1", "ether"),
+    });
     await transaction.wait();
   };
 
@@ -135,10 +137,9 @@ function App() {
     loadBlockchainData();
   }, []);
 
-  // Use useEffect to monitor changes to the `nft` state
   useEffect(() => {
     // If blockchain data is loaded and there is a valid `nft` instance, call mintImage
-    if (isBlockchainLoaded && nft) {
+    if (isBlockchainLoaded && nft && url) {
       mintImage(url);
     }
   }, [isBlockchainLoaded, nft, url]);
