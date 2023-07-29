@@ -29,25 +29,16 @@ function App() {
 
   const loadBlockchainData = async () => {
     const provider = new ethers.providers.Web3Provider(window.ethereum);
-    console.log("Provider:", provider);
+    setProvider(provider);
 
     const network = await provider.getNetwork();
-    console.log("Network:", network);
 
-    // Make sure config is defined and has the 'nft' property
-    console.log("Config:", config);
-    console.log("ChainId:", network.chainId);
-
-    if (config && config[network.chainId] && config[network.chainId].nft) {
-      const nft = new ethers.Contract(
-        config[network.chainId].nft.address,
-        NFT,
-        provider
-      );
-      setNFT(nft);
-    } else {
-      console.error("Invalid config or missing 'nft' property.");
-    }
+    const nft = new ethers.Contract(
+      config[network.chainId].nft.address,
+      NFT,
+      provider
+    );
+    setNFT(nft);
   };
 
   const submitHandler = async (e) => {
