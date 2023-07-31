@@ -6,7 +6,9 @@ async function main() {
   const COST = ethers.utils.parseUnits("0.01", "ether"); // 0.01 ETH
 
   const NFT = await hre.ethers.getContractFactory("NFT");
-  const nft = await NFT.deploy(NAME, SYMBOL, COST);
+  const nft = await NFT.deploy(NAME, SYMBOL, COST, {
+    gasLimit: 6000000, // Increase the gas limit to cover deployment and minting
+  });
   await nft.deployed();
 
   console.log(`Deployed NFT Contract at: ${nft.address}`);
