@@ -124,7 +124,7 @@ function App() {
     const signer = await provider.getSigner();
     const transaction = await nft
       .connect(signer)
-      .mint(tokenURI, { value: ethers.utils.parseUnits("1", "ether") });
+      .mint(tokenURI, { value: ethers.utils.parseUnits("0.01", "ether") });
     await transaction.wait();
   };
 
