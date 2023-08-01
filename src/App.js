@@ -51,7 +51,7 @@ function App() {
 
     setIsWaiting(true);
 
-    // Call AI API to generate a image based on description
+    // Call AI API to generate an image based on the description
     const imageData = await createImage();
 
     // Upload image to IPFS (NFT.Storage)
@@ -67,7 +67,7 @@ function App() {
   const createImage = async () => {
     setMessage("Generating Image...");
 
-    // You can replace this with different model API's
+    // You can replace this with different model APIs
     const URL = `https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-2`;
 
     // Send the request
@@ -99,12 +99,12 @@ function App() {
   const uploadImage = async (imageData) => {
     setMessage("Uploading Image...");
 
-    // Create instance to NFT.Storage
+    // Create instance of NFT.Storage
     const nftstorage = new NFTStorage({
       token: process.env.REACT_APP_NFT_STORAGE_API_KEY,
     });
 
-    // Send request to store image
+    // Send request to store the image
     const { ipnft } = await nftstorage.store({
       image: new File([imageData], "image.jpeg", { type: "image/jpeg" }),
       name: name,

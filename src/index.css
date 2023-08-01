@@ -6,18 +6,16 @@
   box-sizing: border-box;
 }
 
-:root {
-  --clr-white: #FFFFFF;
-  --clr-black: #202020;
-  --clr-blue: #1f16d7;
-  --clr-blue-2: #4641a1;
-}
-
 body {
   margin: 0;
   font-family: "Play";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url(./assets/cyberpunk.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 100vh;
 }
 
 /* ------------------------------------------------------ */
@@ -27,7 +25,10 @@ nav {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
+  background-image: linear-gradient(to bottom right, #0a0a0f, #091729, #1d1c23, #2b2d43, #566086);
+  color: #ffffff; /* AI theme text color */
 }
+
 
 .nav__brand {
   display: flex;
@@ -38,7 +39,7 @@ nav {
 }
 
 .nav__brand h1 {
-  color: var(--clr-blue);
+  color: #0000fc; /* Set the AI theme accent color */
   font-size: clamp(1.75em, 4vw, 2.5em);
   font-weight: 800;
 }
@@ -48,8 +49,8 @@ nav {
   height: 50px;
   margin: 0 auto;
 
-  background-color: var(--clr-blue);
-  color: var(--clr-white);
+  background-color: #0000fc;; /* Set the AI theme accent color */
+  color: #ffffff;
 
   border: none;
   border-radius: 4px;
@@ -63,7 +64,7 @@ nav {
 }
 
 .nav__connect:hover {
-  background-color: var(--clr-blue-2);
+  background-color: #42f507; /* AI theme darker accent color */
 }
 
 /* ------------------------------------------------------ */
@@ -83,7 +84,7 @@ form {
   align-items: flex-start;
   flex-direction: column;
 
-  margin: 0 25px
+  margin: 0 25px;
 }
 
 form input[type="text"] {
@@ -92,15 +93,15 @@ form input[type="text"] {
   margin: 10px 0;
   padding: 10px;
 
-  border: 1px solid var(--clr-blue);
+  border: 1px solid #1f16d7;
   border-radius: 4px;
 
   font-size: 1.10em;
 }
 
 form input[type="submit"] {
-  background-color: var(--clr-blue);
-  color: var(--clr-white);
+  background-color: #1f16d7;
+  color: #ffffff;
 
   width: 250px;
   height: 50px;
@@ -119,7 +120,7 @@ form input[type="submit"] {
 }
 
 form input[type="submit"]:hover {
-  background-color: var(--clr-blue-2);
+  background-color: #4641a1;
 }
 
 /* ------------------------------------------------------ */
@@ -134,7 +135,7 @@ form input[type="submit"]:hover {
   width: 512px;
   height: 512px;
   margin: 0 25px;
-  border: 3px solid var(--clr-blue);
+  border: 3px solid #1f16d7;
   border-radius: 4px;
 
   overflow: hidden;
