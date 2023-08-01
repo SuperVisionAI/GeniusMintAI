@@ -2,7 +2,7 @@
 <img width="1800" alt="Screenshot 2023-08-01 at 15 30 16" src="https://github.com/ThomasHeim11/GeniusMintAI/assets/106417552/ca2cd974-ce63-4f87-9ebd-602cbe9bd4f7">
 
 # About 
-GeniusMintAI is a decentralized application that allows users to mint NFTs by providing a description that Stable Diffusion v2 converts into an image. The NFTs are minted on the Ethereum blockchain and stored on IPFS using [NFT.Storage](https://huggingface.co/stabilityai/stable-diffusion-2)
+GeniusMintAI is a decentralized application that allows users to mint NFTs by providing a description that Stable Diffusion v2 converts into an image. The NFTs are minted on the Ethereum blockchain and stored on IPFS using [NFT.Storage](https://huggingface.co/stabilityai/stable-diffusion-2). The smart contract is deployed to the sepolia testnet. 
 
 
 
