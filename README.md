@@ -1,4 +1,7 @@
-# AI NFT Generator
+# GeniusMintAI
+<img width="1800" alt="Screenshot 2023-08-01 at 15 30 16" src="https://github.com/ThomasHeim11/GeniusMintAI/assets/106417552/ca2cd974-ce63-4f87-9ebd-602cbe9bd4f7">
+
+
 
 ## Technology Stack & Tools
 
