@@ -150,7 +150,7 @@ function App() {
             placeholder="Create a description..."
             onChange={(e) => setDescription(e.target.value)}
           />
-          <input type="submit" value="Create & Mint" />
+          <input type="submit" value="Generate & Mint" />
         </form>
 
         <div className="image">
