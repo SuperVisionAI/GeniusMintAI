@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { NFTStorage, File } from "nft.storage";
 import { Buffer } from "buffer";
 import { ethers } from "ethers";
@@ -169,10 +169,12 @@ function App() {
 
       {!isWaiting && url && (
         <p>
-          View&nbsp;
-          <a href={url} target="_blank" rel="noreferrer">
-            Metadata
-          </a>
+          <strong style={{ color: "blue" }}>
+            View&nbsp;
+            <a href={url} target="_blank" rel="noreferrer">
+              Metadata
+            </a>
+          </strong>
         </p>
       )}
     </div>
