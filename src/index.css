@@ -26,7 +26,7 @@ nav {
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   background-image: linear-gradient();
-  color: #ffffff; /* AI theme text color */
+  color: #ffffff; 
 }
 
 .nav__brand {
@@ -38,8 +38,8 @@ nav {
 }
 
 .nav__brand h1 {
-  color: #0000fc; /* Set the AI theme accent color */
-  font-size: clamp(2em, 44vw, 2.5em);
+  color: #0000fc;
+  font-size: clamp(3em, 44vw, 3em);
   font-weight: 800;
   animation: glow 1s ease-in-out infinite; /* Add animation to create continuous glow */
   border-radius: 10px; /* Adjust the radius to control the roundness of the box shadow */
@@ -50,7 +50,7 @@ nav {
   -ms-user-select: none;
   user-select: none;
 
-  box-shadow: 0 0 1000% 0 rgba(0, 0, 255, 0.8);
+  /* box-shadow: 0 0 1000% 0 rgba(0, 0, 255, 0.8); */
 }
 
 @keyframes glow {
