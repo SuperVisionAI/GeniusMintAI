@@ -26,12 +26,12 @@ nav {
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   background-image: linear-gradient(
-    to bottom right,
+    /* to bottom right,
     #0a0a0f,
     #091729,
     #1d1c23,
     #2b2d43,
-    #566086
+    #566086 */
   );
   color: #ffffff; /* AI theme text color */
 }
