@@ -41,10 +41,6 @@ You'll also need to create an account on [NFT.Storage](https://nft.storage/), an
 ### 5. Start Hardhat node
 `$ npx hardhat node`
 
-### 5. Unit Test Coverage
-<img width="680" alt="image" src="https://github.com/ThomasHeim11/GeniusMintAI/assets/106417552/698ec467-a8d3-40a6-b6ae-5e7f8f3ebdd4">
-
-
 ### 6. Run deployment script
 In a separate terminal execute:
 `$ npx hardhat run ./scripts/deploy.js --network localhost`
